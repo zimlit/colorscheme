@@ -1,0 +1,156 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+
+# Any items in the `env` entry below will be added as
+# environment variables. Some entries may override variables
+# set by alacritty itself.
+env:
+  # TERM variable
+  #
+  # This value is used to set the `$TERM` environment variable for
+  # each instance of Alacritty. If it is not present, alacritty will
+  # check the local terminfo database and use `alacritty` if it is
+  # available, otherwise `xterm-256color` is used.
+  TERM: alacritty
+  LANG: "en_US.UTF-8"
+  LC_CTYPE: en_US.UTF-8
+window:
+  # Window dimensions (changes require restart)
+  #
+  # Specified in number of columns/lines, not pixels.
+  # If both are `0`, this setting is ignored.
+  #dimensions:
+  #  columns: 0
+  #  lines: 0
+  # Window position (changes require restart)
+  #
+  # Specified in number of pixels.
+  # If the position is not set, the window manager will handle the placement.
+  #position:
+  #  x: 0
+  #  y: 0
+  # Window padding (changes require restart)
+  #
+  # Blank space added around the window in pixels. This padding is scaled
+  # by DPI and the specified value is always added at both opposing sides.
+  padding:
+    x: 25
+    y: 25
+  # Spread additional padding evenly around the terminal content.
+  #dynamic_padding: false
+  # Window decorations
+  #
+  # Values for `decorations`:
+  #     - full: Borders and title bar
+  #     - none: Neither borders nor title bar
+  #
+  # Values for `decorations` (macOS only):
+  #     - transparent: Title bar, transparent background and title bar buttons
+  #     - buttonless: Title bar, transparent background, but no title bar buttons
+  #decorations: full
+  # Startup Mode (changes require restart)
+  #
+  # Values for `startup_mode`:
+  #   - Windowed
+  #   - Maximized
+  #   - Fullscreen
+  #
+  # Values for `startup_mode` (macOS only):
+  #   - SimpleFullscreen
+  #startup_mode: Windowed
+  # Window title
+  #title: Alacritty
+  # Window class (Linux/BSD only):
+  #class:
+  # Application instance name
+  #instance: Alacritty
+  # General application class
+  #general: Alacritty
+  # GTK theme variant (Linux/BSD only)
+  #
+  # Override the variant of the GTK theme. Commonly supported values are `dark` and `light`.
+  # Set this to `None` to use the default theme variant.
+  #gtk_theme_variant: None
+  #scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  #history: 10000
+  # Number of lines the viewport will move for every line scrolled when
+  # scrollback is enabled (history > 0).
+  #multiplier: 3
+
+# Font configuration
+font:
+  # The normal (roman) font face to use.
+  normal:
+    family: "Source Code Pro" # should be "Menlo" or something on macOS.
+    # Style can be specified to pick a specific face.
+    style: Regular
+
+  # The bold font face
+  bold:
+    family: "Source Code Pro" # should be "Menlo" or something on macOS.
+    # Style can be specified to pick a specific face.
+    style: Bold
+
+  # The italic font face
+  italic:
+    family: "Source Code Pro" # should be "Menlo" or something on macOS.
+    # Style can be specified to pick a specific face.
+    style: Italic
+
+  # Point size of the font
+  size: 13
+
+  # Offset is the extra space around each character. offset.y can be thought of
+  # as modifying the linespacing, and offset.x as modifying the letter spacing.
+  offset:
+    x: 0
+    y: 0
+
+  # Glyph offset determines the locations of the glyphs within their cells with
+  # the default being at the bottom. Increase the x offset to move the glyph to
+  # the right, increase the y offset to move the glyph upward.
+  glyph_offset:
+    x: 0
+    y: 0
+
+  # Scale the font size based on the monitor's DPI. This will lead to bigger text on HiDPI
+  # screens and make reading text a little easier.
+  # On X11 it is possible to change the DPI for each instance of alacritty by using
+  # `WINIT_HIDPI_FACTOR=1.0 alacritty` to scale the font.
+  #scale_with_dpi: true
+
+  # OS X only: use thin stroke font rendering. Thin strokes are suitable
+  # for retina displays, but for non-retina you probably want this set to
+  # false.
+  use_thin_strokes: false
+  # Bright colors
+  # Colors (Solarized Dark)
+colors:
+  # Default colors
+  primary:
+    background: '0x11263b'
+    foreground: '0x6aa8c7'
+
+  # Normal colors
+  normal:
+    black:   '0x141d2b'
+    red:     '0x913c3c'
+    green:   '0x0d6444'
+    yellow:  '0xaf9155'
+    blue:    '0x2c58ad'
+    magenta: '0x422280'
+    cyan:    '0x388b8d'
+    white:   '0x8b9db0'
+
+  # Bright colors
+  bright:
+    black:   '0x192537'
+    red:     '0xb64b4b'
+    green:   '0x139062'
+    yellow:  '0xf0c674'
+    blue:    '0x366cd5'
+    magenta: '0x5c2abc'
+    cyan:    '0x48b3b6'
+    white:   '0xb1c9e1'
+background_opacity: 0.8
